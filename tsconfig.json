@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "module": "ESNext",
+        "target": "ESNext",
+        "moduleResolution": "node",
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "noImplicitReturns": true,
+        "outDir": "./dist",
+        "declaration": true,
+        "declarationDir": "./dist",
+        "sourceMap": true,
+        "declarationMap": true,
+    }
+}
