@@ -1,5 +1,3 @@
-
-
 /**
  * Checks if the buffer has enough data to read the following number of bytes.
  * @param buffer The buffer to check.
@@ -12,7 +10,7 @@ export const hasData = (buffer: Buffer, offset: number, length: number): boolean
 
 /**
  * A result type that can be used to return either a value or an error.
- * 
+ *
  * **Note:** This is a simplified version of the `Result` type from Rust.
  */
 export class IResult<Data, Error> {
@@ -42,14 +40,14 @@ export class IResult<Data, Error> {
 
     public unwrap(): Data {
         if (this.data === null) {
-            throw new Error("Attempted to unwrap a result with no data");
+            throw new Error('Attempted to unwrap a result with no data');
         }
         return this.data;
     }
 
     public unwrapError(): Error {
         if (this.error === null) {
-            throw new Error("Attempted to unwrap a result with no error");
+            throw new Error('Attempted to unwrap a result with no error');
         }
         return this.error;
     }

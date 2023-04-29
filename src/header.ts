@@ -1,7 +1,7 @@
 import { IResult, hasData } from './utils';
 
 const VERSION = 1;
-const MAGIC = 0x4C464952; // 'RFIL'
+const MAGIC = 0x4c464952; // 'RFIL'
 
 export interface IHeader {
     magic: number;
