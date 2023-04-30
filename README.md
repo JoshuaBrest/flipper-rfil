@@ -40,5 +40,5 @@ Here is a table with the data structure:
 | Offset | Length | Type      | Description | Example                                   |
 | ------ | ------ | --------- | ----------- | ----------------------------------------- |
 | 0x00   | 0x01   | `uint32`  | Data length | `0x0A` (for 10 bytes)                     |
-| 0x01   | 0x0A   | `uint8[]` | Data        | `0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00` |
+| 0x04   | 0x0A   | `uint8[]` | Data        | `0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00` |
 
