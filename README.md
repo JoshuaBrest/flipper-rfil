@@ -1,12 +1,56 @@
-# RFIL File Format
+# RFIL
+
+Use our NPM package!
+```bash
+npm i rfil
+```
+
+## Usage
+
+You can either use commonjs or esm.
+
+### CommonJS
+
+```js
+const { parse } = require('rfil');
+const fs = require('fs');
+
+// Read a buffer from a file
+const buffer = fs.readFileSync('file.rfil');
+
+// Parse the buffer
+const data = parse(buffer);
+
+// Print the data
+console.log(data);
+```
+
+### ESM
+
+```js
+import { parse } from 'rfil';
+import fs from 'node:fs';
+
+// Read a buffer from a file
+const buffer = fs.readFileSync('file.rfil');
+
+// Parse the buffer
+const data = parse(buffer);
+
+// Print the data
+console.log(data);
+```
+
+
+## RFIL File Format
 
 I will be calling the flipper zero file format RFIL because the magic bytes are `0x4C464952` which is `RFIL` in ASCII. This is a decoder for the RFIL file format written in TypeScript.
 
-## File Structure
+### File Structure
 
 There are 2 parts in a RFIL file: the header and the data. It is also encoded in this little s*** (💩) called little endian.
 
-### Header
+#### Header
 
 The header first starts with a 32 bit (4 byte) magic number `0x4C464952` which is `RFIL` in ASCII.
 
@@ -28,7 +72,7 @@ Here is a table with the header structure:
 | 0x0C   | 0x04   | `float32` | Duty cycle   | `0x0000003F` (for 0.5 seconds) |
 | 0x10   | 0x04   | `uint32`  | Data length  | `0x0000000A` (for 10 bytes)    |
 
-### Data
+#### Data
 
 The data is just a bunch of bytes in pairs.
 
