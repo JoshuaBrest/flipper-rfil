@@ -10,6 +10,9 @@
     "author": "JoshuaBrest",
     "license": "MIT",
     "private": false,
+    "files": [
+        "dist"
+    ],
     "devDependencies": {
         "@types/node": "^18.16.3",
         "@typescript-eslint/eslint-plugin": "^5.59.1",
