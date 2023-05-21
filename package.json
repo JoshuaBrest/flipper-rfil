@@ -3,7 +3,7 @@
     "version": "1.0.1",
     "description": "RFIL file format for flipper",
     "main": "dist/index.min.cjs",
-    "types": "dist/index.d.ts",
+    "types": "dist/index.min.d.cts",
     "module": "dist/index.min.mjs",
     "type": "module",
     "repository": "https://github.com/JoshuaBrest/flipper-rfil",

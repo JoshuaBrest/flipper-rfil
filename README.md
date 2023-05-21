@@ -1,8 +1,13 @@
 # RFIL
 
-Use our NPM package!
+Use our NPM package [here](https://www.npmjs.com/package/rfil)!
 ```bash
 npm i rfil
+```
+
+or use yarn
+```bash
+yarn add rfil
 ```
 
 ## Usage
@@ -39,6 +44,33 @@ const data = parse(buffer);
 
 // Print the data
 console.log(data);
+```
+
+### Exporting raw files
+
+Here's an example on how to export raw files from a RFIL file.
+
+```js
+import { parse } from 'rfil';
+import fs from 'node:fs';
+import path from 'node:path';
+
+// Read a buffer from a file
+const buffer = fs.readFileSync('file.rfil');
+
+// Parse the buffer
+const data = parse(buffer);
+
+// Check for data
+if (!data.hasData()) {
+    console.log('An error occurred: %s', data.hasError() ? data.unwrapError() : '[Unknown error]');
+    process.exit(1);
+}
+
+// Write files
+data.unwrap().data.forEach((data, index) => {
+    fs.writeFileSync(path.join(process.cwd(), `out${index}.raw`), data.data);
+});
 ```
 
 
