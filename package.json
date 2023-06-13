@@ -10,6 +10,9 @@
     "author": "JoshuaBrest",
     "license": "MIT",
     "private": false,
+    "publishConfig": {
+        "provenance": true
+    },
     "files": [
         "dist"
     ],
