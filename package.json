@@ -1,6 +1,6 @@
 {
     "name": "rfil",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "RFIL file format for flipper",
     "main": "dist/index.min.cjs",
     "types": "dist/index.min.d.cts",
